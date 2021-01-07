@@ -1,5 +1,8 @@
+import 'package:cet_todo_app/models/task_repository.dart';
 import 'package:cet_todo_app/screens/add_task_screen.dart';
 import 'package:flutter/material.dart';
+import '../widgets/task_list.dart';
+import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -39,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
                       color: Colors.white),
                 ),
                 Text(
-                  '3 Tasks (2 Incomplete)',
+                  '${Provider.of<TaskRepository>(context).taskCount()} Tasks (${Provider.of<TaskRepository>(context).incompleteTaskCount()} Incomplete)',
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.white,
@@ -57,60 +60,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
                 color: Colors.white,
               ),
-              child: ListView(children: [
-                ListTile(
-                  title: Text(
-                    'Study CET 301',
-                    style: TextStyle(color: Colors.lightBlueAccent),
-                  ),
-                  trailing: Checkbox(
-                    value: false,
-                    activeColor: Colors.lightBlueAccent,
-                    onChanged: (value) {
-                      print(value);
-                    },
-                  ),
-                ),
-                ListTile(
-                  title: Text(
-                    'Study MATH 201',
-                    style: TextStyle(color: Colors.lightBlueAccent),
-                  ),
-                  trailing: Checkbox(
-                    value: false,
-                    activeColor: Colors.lightBlueAccent,
-                    onChanged: (value) {
-                      print(value);
-                    },
-                  ),
-                ),
-                ListTile(
-                  title: Text(
-                    'Study CET 321',
-                    style: TextStyle(color: Colors.lightBlueAccent),
-                  ),
-                  trailing: Checkbox(
-                    value: false,
-                    activeColor: Colors.lightBlueAccent,
-                    onChanged: (value) {
-                      print(value);
-                    },
-                  ),
-                ),
-                ListTile(
-                  title: Text(
-                    'Study CET 341',
-                    style: TextStyle(color: Colors.lightBlueAccent),
-                  ),
-                  trailing: Checkbox(
-                    value: false,
-                    activeColor: Colors.lightBlueAccent,
-                    onChanged: (value) {
-                      print(value);
-                    },
-                  ),
-                ),
-              ]),
+              child: TaskList(),
             ),
           )
         ],
