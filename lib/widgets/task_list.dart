@@ -29,48 +29,48 @@ class TaskList extends StatelessWidget {
                     await showCupertinoDialog(
                         context: context,
                         builder: (context) => CupertinoAlertDialog(
-                              title: Text('Confirmation'),
-                              content: Text(
-                                  'Are you sure to delete ${task.title}?\nThis action is unreversible!'),
-                              actions: [
-                                CupertinoDialogAction(
-                                  child: Text('Yes'),
-                                  onPressed: () {
-                                    taskRepository.deleteTask(task);
-                                    Navigator.of(context).pop();
-                                  },
-                                ),
-                                CupertinoDialogAction(
-                                  child: Text('No'),
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                ),
-                              ],
-                            ));
+                          title: Text('Confirmation'),
+                          content: Text(
+                              'Are you sure to delete ${task.title}?\nThis action is unreversible!'),
+                          actions: [
+                            CupertinoDialogAction(
+                              child: Text('Yes'),
+                              onPressed: () {
+                                taskRepository.deleteTask(task);
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                            CupertinoDialogAction(
+                              child: Text('No'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        ));
                   else {
                     await showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                              title: Text('Confirmation'),
-                              content: Text(
-                                  'Are you sure to delete ${task.title}?\nThis action is unreversible!'),
-                              actions: [
-                                FlatButton(
-                                  child: Text('Yes'),
-                                  onPressed: () {
-                                    taskRepository.deleteTask(task);
-                                    Navigator.of(context).pop();
-                                  },
-                                ),
-                                FlatButton(
-                                  child: Text('No'),
-                                  onPressed: () {
-                                    Navigator.of(context).pop();
-                                  },
-                                ),
-                              ],
-                            ));
+                          title: Text('Confirmation'),
+                          content: Text(
+                              'Are you sure to delete ${task.title}?\nThis action is unreversible!'),
+                          actions: [
+                            FlatButton(
+                              child: Text('Yes'),
+                              onPressed: () {
+                                taskRepository.deleteTask(task);
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                            FlatButton(
+                              child: Text('No'),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        ));
                   }
                 },
               );

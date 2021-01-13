@@ -34,9 +34,9 @@ class _MainScreenState extends State<MainScreen> {
                   height: 10,
                 ),
                 Text(
-                  'Cet Todo',
+                  'Cet Todo \nEmre YILDIRIM',
                   style: TextStyle(
-                      fontSize: 40,
+                      fontSize: 35,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 3.0,
                       color: Colors.white),
@@ -44,7 +44,7 @@ class _MainScreenState extends State<MainScreen> {
                 Text(
                   '${Provider.of<TaskRepository>(context).taskCount()} Tasks (${Provider.of<TaskRepository>(context).incompleteTaskCount()} Incomplete)',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 23,
                     color: Colors.white,
                   ),
                 )

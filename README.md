@@ -1,6 +1,9 @@
-# cet_todo_app
+# Emre Yıldırım - CET301 HW5
 
-A new Flutter application.
+Emre YILDIRIM CET301 HW5
+
+![Screenshot_1610564901](https://user-images.githubusercontent.com/44210684/104497840-fc176800-55eb-11eb-998d-63e04a01a7d8.png)
+
 
 ## Getting Started
 
